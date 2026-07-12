@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automotive-diagnostic-security-analyzer"
+version = "1.0.0"
+description = "Clean-room tool for synthetic UDS trace analysis and automotive cybersecurity reporting."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Harold L. R. Watkins"}
+]
+keywords = [
+  "automotive cybersecurity",
+  "UDS",
+  "ISO 14229",
+  "embedded systems",
+  "verification and validation"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13"
+]
+
+[project.scripts]
+autosec-analyze = "autosec_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["autosec_analyzer*"]
