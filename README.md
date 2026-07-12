@@ -1,18 +1,20 @@
 # Automotive Diagnostic Security Analyzer
 
+[![CI](https://github.com/LRTechpro/Automotive-Diagnostic-Security-Analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/LRTechpro/Automotive-Diagnostic-Security-Analyzer/actions/workflows/ci.yml)
+
 A clean-room automotive cybersecurity portfolio project for analyzing synthetic UDS diagnostic traces, identifying security-relevant behavior, tracking diagnostic state, and exporting evidence-based findings.
 
 This repository was created from scratch with a new Git history. It contains no OEM logs, VINs, customer records, proprietary software packages, internal URLs, or production vehicle data.
 
 ## What it demonstrates
 
-- UDS service and negative response decoding
-- Diagnostic session and SecurityAccess state tracking
-- Negative-path and sequence validation
+- UDS service and negative-response decoding
+- Diagnostic-session and SecurityAccess state tracking
+- Negative-path and programming-sequence validation
 - Security-relevant finding classification
 - Reproducible Markdown, JSON, and CSV reporting
 - Command-line and Tkinter desktop interfaces
-- Standard-library Python with automated tests
+- Standard-library Python with automated tests and CI
 
 ## Supported UDS patterns
 
@@ -48,6 +50,14 @@ Required fields:
 All included examples are fictional and synthetic.
 
 ## Quick start
+
+Install the package in editable mode:
+
+```bash
+python -m pip install -e .
+```
+
+Analyze the bundled synthetic trace:
 
 ```bash
 python -m autosec_analyzer.cli sample_data/synthetic_diagnostic_log.txt --output reports
@@ -89,6 +99,10 @@ tests/
   test_analyzer.py
 ```
 
+## Engineering value
+
+The project demonstrates how diagnostic evidence can be transformed into repeatable verification findings. It focuses on protocol behavior, security preconditions, state transitions, and traceable reporting rather than presenting a simple byte decoder.
+
 ## Engineering boundaries
 
 This project is a portfolio and learning artifact. It does not:
@@ -100,13 +114,7 @@ This project is a portfolio and learning artifact. It does not:
 - communicate with a physical vehicle
 - implement production cryptography or secure boot
 
-## Suggested repository description
-
-> Clean-room Python tool for synthetic UDS trace analysis, diagnostic-state tracking, negative-path validation, and automotive cybersecurity reporting.
-
-## Suggested topics
-
-`automotive-cybersecurity` `uds` `iso-14229` `embedded-systems` `diagnostic-security` `python` `verification-validation` `security-testing`
+See [SECURITY.md](SECURITY.md) for the repository data-handling policy.
 
 ## License
 
