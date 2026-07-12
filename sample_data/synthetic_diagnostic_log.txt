@@ -1,0 +1,18 @@
+# Fictional portfolio trace. No production or OEM data.
+2026-07-12T12:00:00Z,module=BMS_SIM,direction=TX,payload=10 02,note=Enter programming session
+2026-07-12T12:00:00Z,module=BMS_SIM,direction=RX,payload=50 02,note=Programming session accepted
+2026-07-12T12:00:01Z,module=BMS_SIM,direction=TX,payload=34 00 44 00 00 10 00,note=Attempt download before unlock
+2026-07-12T12:00:01Z,module=BMS_SIM,direction=RX,payload=7F 34 33,note=Security access denied
+2026-07-12T12:00:02Z,module=BMS_SIM,direction=TX,payload=27 01,note=Request seed
+2026-07-12T12:00:02Z,module=BMS_SIM,direction=RX,payload=67 01 12 34 56 78,note=Synthetic seed returned
+2026-07-12T12:00:03Z,module=BMS_SIM,direction=TX,payload=27 02 AB CD EF 01,note=Submit synthetic key
+2026-07-12T12:00:03Z,module=BMS_SIM,direction=RX,payload=67 02,note=Security access granted
+2026-07-12T12:00:04Z,module=BMS_SIM,direction=TX,payload=34 00 44 00 00 10 00,note=Request download after unlock
+2026-07-12T12:00:04Z,module=BMS_SIM,direction=RX,payload=74 20 00 80,note=Download accepted
+2026-07-12T12:00:05Z,module=BMS_SIM,direction=TX,payload=36 01 AA BB CC DD,note=Transfer block 1
+2026-07-12T12:00:05Z,module=BMS_SIM,direction=RX,payload=76 01,note=Transfer block accepted
+2026-07-12T12:00:06Z,module=BMS_SIM,direction=TX,payload=37,note=Transfer exit
+2026-07-12T12:00:06Z,module=BMS_SIM,direction=RX,payload=77,note=Transfer exit accepted
+2026-07-12T12:00:07Z,module=BMS_SIM,direction=TX,payload=31 01 FF 00,note=Run synthetic verification routine
+2026-07-12T12:00:07Z,module=BMS_SIM,direction=RX,payload=7F 31 78,note=Routine still processing
+2026-07-12T12:00:08Z,module=BMS_SIM,direction=RX,payload=71 01 FF 00 00,note=Routine completed
